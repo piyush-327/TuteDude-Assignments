@@ -3,37 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment 3</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
     <div class="container">
-        <div class="logo">Logo</div>
-        <ul class="navbar">
-            <li>Home</li>
-            <li>Services</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-        </ul>
-        <div class="username">Username</div>
+        <div class="greetText" id="greet">
+            <h2 id="greets">Hello</h2>
+            </div>
     </div>
-    </header>
-    <main>
-    <div class="main">
-    <div class="text"><h1>Revatilize your</h1>
-    <h1>Clothes with Expert</h1>
-    <h1 id="text-color">Laundry Services!</h1>
-    <span class="descr">From Premium Dry cleaning to swift wash and fold, we 
-        deliver care and convenience.Schedule a pickup and
-        rediscover the freshness of your clothes today!
-    </span>
-    <button id="Btn">Book a Service Today!</button>
-    </div>
-    <div class="img">
-        <img id="image" src="washing.jpg" alt="">
+    <div class="color-box">
+    <div class="container2">
+        <div class="box" id="box1">Red</div>
+        <div class="box" id="box2">Blue</div>
+        <div class="box" id="box3">Green</div>
+        <div class="box" id="box4">Yellow</div>
     </div>
     </div>
-    </main>
+
+    <div class="container3">
+        <form action=""><input id="text" type="text" minlength="5" maxlength="50" required placeholder="Enter Your Name"></form>
+        <button onclick="greet()" id="Btn">Greet</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
