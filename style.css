@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    background-color: grey;
+}
+.greetText h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.color-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    gap: 6rem;
+}
+.box{
+    border: 2px solid black;
+    padding: 3.5rem;
+    font-size:25px;
+}
+.container3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 5px;
+}
+.container3 input{
+    padding: 10px 15px;
+    border-radius: 4px;
+
+}
+.container3 button{
+    padding: 10px 15px;
+}
