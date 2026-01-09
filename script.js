@@ -19,11 +19,12 @@ function yellow(){
 function greet(){
     var name = document.getElementById('text').value;
     var change = document.getElementById('greets');
-    change.innerHTML = ("Hello , " + name);
+    change.innerHTML = ("Hello " + name);
 }
 
 box1.addEventListener("click",red);
 box2.addEventListener("click",blue);
 box3.addEventListener("click",green);
 box4.addEventListener("click",yellow);
+
 Btn.addEventListener("click",greet);
