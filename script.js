@@ -3,6 +3,7 @@ const box2 = document.getElementById('box2');
 const box3 = document.getElementById('box3');
 const box4 = document.getElementById('box4');
 const Btn = document.getElementById('Btn');
+const inputbox = document.getElementById('text');
 
 function red(){
     box1.style.backgroundColor = "red";
@@ -17,14 +18,19 @@ function yellow(){
     box4.style.backgroundColor = "yellow";
 }
 function greet(){
-    var name = document.getElementById('text').value;
-    var change = document.getElementById('greets');
-    change.innerHTML = ("Hello " + name);
+    if (inputbox.value === ''){
+
+    }
+    else
+    {
+        var name = inputbox.value;
+        var change = document.getElementById('greets');
+        change.innerHTML = ("Hello , " + name);
+    }
 }
 
 box1.addEventListener("click",red);
 box2.addEventListener("click",blue);
 box3.addEventListener("click",green);
 box4.addEventListener("click",yellow);
-
 Btn.addEventListener("click",greet);
