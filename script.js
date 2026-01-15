@@ -19,7 +19,9 @@ function yellow(){
 }
 function greet(){
     if (inputbox.value === ''){
-
+        var name = inputbox.value;
+        var change = document.getElementById('greets');
+        change.innerHTML = ("Hello");
     }
     else
     {
