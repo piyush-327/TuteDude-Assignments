@@ -3,29 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 3</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "CE1fY3ivW-v5RwDbZ",
+      });
+    })();
+    </script>
 </head>
 <body>
+    <header>
     <div class="container">
-        <div class="greetText" id="greet">
-            <h2 id="greets">Hello</h2>
+        <div class="logo">Logo</div>
+        <ul class="navbar">
+            <li id="nav-list">Home</li>
+            <li id="nav-list">Services</li>
+            <li id="nav-list">About Us</li>
+            <li id="nav-list">Contact Us</li>
+        </ul>
+        <div class="username">Username</div>
+    </div>
+    </header>
+    <main>
+    <section class="hero-section">
+    <div class="main">
+    <div class="text"><h1>Revatilize your</h1>
+    <h1>Clothes with Expert</h1>
+    <h1 id="text-color">Laundry Services!</h1>
+    <span class="descr">From Premium Dry cleaning to swift wash and fold, we 
+        deliver care and convenience.Schedule a pickup and
+        rediscover the freshness of your clothes today!
+    </span>
+    <button id="Btn"><i class="fa-solid fa-store"></i>  Book a Service Today!</button>
+    </div>
+    <div class="img">
+        <img id="image" src="washing.jpg" alt="">
+    </div>
+    </div>
+    </section>
+    <section class="section-overview">
+        <div class="overview">
+            <div class="achievements"><h1>Our Achievements</h1></div>
+            <div class="details">
+                <ul class="ach-text">
+                    <li><blockquote>15+
+                        <br><cite>Laundry Services</cite>
+                    </blockquote></li>
+                    <li><blockquote>240+ <br><cite>Happy customers</cite></blockquote></li>
+                    <li><blockquote>2+ <br><cite>Years of Experience</cite></blockquote></li>
+                </ul>
             </div>
-    </div>
-    <div class="color-box">
-    <div class="container2">
-        <div class="box" id="box1">Red</div>
-        <div class="box" id="box2">Blue</div>
-        <div class="box" id="box3">Green</div>
-        <div class="box" id="box4">Yellow</div>
-    </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="tabs">
+        <div class="left-div">
+            <div class="header">
+                <h1>Our Services</h1>
+                <p style="color: #aea9a9;">Click on the Add To Cart Button To Add The Services To Your Cart.</p>
+            </div><br>
+            <hr>
+    <div class="service">
+      <span class="name">Dry Cleaning</span>
+      <span class="price">₹200</span>
+      <button onclick="toggleItem('Dry Cleaning', 200, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
     </div>
 
-    <div class="container3">
-        <form action=""><input id="text" type="text" minlength="5" maxlength="50" required placeholder="Enter Your Name"></form>
-        <button onclick="greet()" id="Btn">Greet</button>
+    <div class="service">
+      <span class="name">Ironing</span>
+      <span class="price">₹30</span>
+      <button onclick="toggleItem('Ironing', 30, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
     </div>
 
+    <div class="service">
+      <span class="name">Stain Removal</span>
+      <span class="price">₹500</span>
+      <button onclick="toggleItem('Stain Removal', 500, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
+    </div>
+
+    <div class="service">
+      <span class="name">Wash&Fold</span>
+      <span class="price">₹100</span>
+      <button onclick="toggleItem('Wash&Fold', 100, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
+    </div>
+
+    <div class="service">
+      <span class="name">Leather & Suede Cleaning</span>
+      <span class="price">₹999</span>
+      <button onclick="toggleItem('Leather & Suede Cleaning', 999, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
+    </div>
+
+    <div class="service">
+      <span class="name">Wedding Dress Cleaning</span>
+      <span class="price">₹2800</span>
+      <button onclick="toggleItem('Wedding Dress Cleaning', 2800, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
+    </div>
+    <br>
+            <hr>
+            <div class="service-info">
+                <p><i class="fa-solid fa-circle-info"></i>Add the items to the cart and book now.</p>
+            </div>
+        </div>
+        <div class="right-div">
+            <div class="right-div-1">
+                <h1>Added Items</h1>
+                <div class="head">
+                    <p>S.No</p>
+                    <p>Service Name</p>
+                    <p>Price</p>
+                </div>
+                <div class="center-text">
+                    <i class="fa-solid fa-circle-info empty-tag"></i>
+                    <h3>No items added</h3>
+                    <p>Add items to the Cart from Services Bar.</p>
+                </div>
+                <hr>
+                <ul id="cartItems"></ul>
+                <div class="total-top">
+                <h4 id="total-text">Total:</h4>
+                <span id="total">₹0</span>
+                </div>
+            </div>
+            <div class="right-div-2">
+                <h1>Book Now</h1>
+                <div class="first">
+                <form action="#" id="first"><label for="Name">Name</label>
+                    <input type="text" id="form-name" minlength="5" maxlength="50" required placeholder="John Doe">
+                </form>
+                </div>
+                <div class="contact">
+                    <form action="#"><label for="email">Email</label><input type="email" name="" id="form-email" placeholder="@gmail.com" required></form>
+                    <form action="#"><label for="Phone Number">Phone Number</label><input type="tel" name="" id="form-number" placeholder="0000000000" required></form>
+                </div>
+                <button id="book" onclick="sendMail()">Book now</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="quality">
+        <div class="container-quality">
+            <div class="premium"><i class="fa-solid fa-jug-detergent" id="icons"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quae libero quam sint! Ipsam repudiandae sunt reprehenderit ab cumque possimus.</p></div>
+            <div class="customer-support"><i class="fa-solid fa-phone" id="icons"></i>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia consequatur consequuntur animi voluptates laboriosam atque ratione! Nostrum doloremque repellat libero.</p></div>
+            <div class="quality-delivery"><i class="fa-solid fa-truck-fast" id="icons"></i>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque provident, vitae voluptatibus debitis quia blanditiis veniam possimus sapiente quo nisi.</p></div>
+            <div class="quality-prices"><i class="fa-solid fa-hand-holding-dollar" id="icons"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel explicabo earum distinctio iure labore voluptatem totam incidunt id voluptates voluptate.</p></div>
+        </div>
+    </section>
+    <section class="newsletter">
+        <h1 class="news-head">Subscribe to our</h1>
+        <h1 class="news-tail">Newsletter.</h1>
+        <div class="news-info">
+            <form action="#" id="news-name">
+                <input type="text" minlength="5" maxlength="50" required placeholder="John Doe">
+            </form>
+            <form action="#" id="news-email">
+                <input type="email" minlength="5" maxlength="50" required placeholder="@gmail.com">
+            </form>
+        </div>
+        <button id="subscribe">Subscribe !</button>
+    </section>
+    </main>
+    <footer>
+        <div class="about-us"><h1>Logo</h1> <p>About us</p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam.</span></div>
+        <div class="imp-links"><h2>Important Links</h2><ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Refund Policy</a></li></ul></div>
+        <div class="contacts"><h2>Contact</h2>
+        <ul><li>mail@site.com</li>
+        <li>+91 91234 56780</li></ul></div>
+        <div class="social"><h2>Follow Us</h2>
+        <div class="profiles">
+            <ul>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+            </ul>
+        </div></div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
