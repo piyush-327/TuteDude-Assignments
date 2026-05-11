@@ -47,11 +47,33 @@ function updateTotal() {
 }
 
 function sendMail(){
-  let parms = {
-    name : document.getElementById("form-name").value,
-    email : document.getElementById("form-email").value,
-    number : document.getElementById("form-number").value,
+  const nameInput = document.getElementById("form-name").value.trim();
+  const emailInput = document.getElementById("form-email").value.trim();
+  const numberInput = document.getElementById("form-number").value.trim();
+  
+  // Validation checks
+  if (!nameInput) {
+    alert("Please enter your name");
+    return;
   }
-
+  if (nameInput.length < 5) {
+    alert("Name must be at least 5 characters");
+    return;
+  }
+  if (!emailInput || !emailInput.includes("@")) {
+    alert("Please enter a valid email");
+    return;
+  }
+  if (!numberInput || numberInput.length < 10) {
+    alert("Please enter a valid phone number");
+    return;
+  }
+  
+  let parms = {
+    name: nameInput,
+    email: emailInput,
+    number: numberInput,
+  }
+  
   emailjs.send("service_x8fryhl","template_a8jkerb",parms).then(alert("Email Sent!!!"))
 }
