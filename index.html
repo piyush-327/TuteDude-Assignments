@@ -1,202 +1,328 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="text/javascript"
-        src="script.js">
-    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAFBgAEAgMHAQj/xAA+EAACAQMDAgQEBAMGBQUBAAABAgMEBREAEiEGMRMiQVEUYXGBMkKRoQcjsRUzYpLR8FJygsHSg5PC4fEW/8QAGgEAAgMBAQAAAAAAAAAAAAAAAgQAAQMFBv/EACsRAAICAQQBAwIGAwAAAAAAAAECAAMRBBIhMRMiQVEFYTJxgZGx8AYjUv/aAAwDAQACEQMRAD8A7W/4zoZeLVHc4FRm8N0bcrhcn6fTRN/xnWPtqwSDkSmGRicwraJfiZKFZsVED7h4T4dWHII/UaHdTWanuEf9o2WzSw3mnmQ1CbAqThgcsvoTnHbnVmru1A9bVCtpYZXad2BdipUk44xt9hrRLV2holQUwCjlV+KbC/QF9Pmrfg+85x1W04H8Ga6O2imkaW4mnnqFQFLck5DmQ44dgpCgdzjOrqPPUGqq5izPWSZzASRFGg2Kqg/l3jnjBAJPfQuarRYnWgpgok4ZhKOB+vf5+n11Ka4VSSUqSWzCQhU3LUgYQNk8fP1HrobtM7p6BzD0+uUXA2HiHSYxM9RKPElkYlVJ9MnVuJ5X9Aq/8px/XQsyxSVDSRlhE2ANx5Vf9jQOs6nrp6yWntFDUVKw/wB4KeLdtHzJ/p/+abcrWgDTlVVvdYzL1kxr+IZcxssfBwFbOSuOMcHW2nppKvG+hijU87pMfsMZ1l0vfqbqKhes27amBvDqFlUKY2HvngevoTr293NaRAqAeK43KGHP/M2f6HJPrxxrFbC3CiMeFa+XMH3imoVjmpEnnBZeTCQpQHtgE+uDxoNHBamISJ5I3PCu6FiD6c/8PuNa6hNsLSTb2kmw8Z3Bs987vXOtNYsVDUr4E0VV5QwcDyBj6EeuNNrSMc8mLNcxIxwIwx3OsskaCNRCm0H4Uvx9Ap7fUHGnLp24Q3ql8eMFMcSIfQ+2uYVEs/UdJPDVVtZC8MbyCSJC5mRXC7e/Leb9M6bv4Y0lVaJrhaq2VJJYSrCRScurAYJHv6fUaQuZdpGOZ1aUYncTxH4KFGFHGNAYCGadx+aolI/zHR52CKzH8ozpYhkZbcrL+MR7x8yedeO/yN/9KJ7kzr6ccwbe7DHeYI4JJPDenm3BtufIfxD7/wBdNtlAFpowvYQqB9B20JilD5dTlXxtP2Gi1l5tNH8ogP01r9I1Fjs1bHgAED8+4NigDMJJ+HU1F7amu7Mprf8AEdYs6xjc5CgepPGtNxq0o497Dcx4VR66W66vEyGatjXw19nb9hnWqVF5jZaEnGusULXu4000/gstdM6sY/xIzEpggjK7SMaCrRSg/wAu44/5gw/104fxFuf9qpEbZSzI9K53uMsShHtzxn9NJklwlqRHDBSRLKvJcLuZvrnsB3z6e+tcInBUwg5tXJMJUEU0QJluMTHPZvEII/TRenrIqd1Y1EWORIgZyG9iMjv30s/FiPylPFxwWVgoJ9ey6groSRmlP/vn/TWqeNWDDI/WZspZDW4BB+3P7xur+oIobTVeEVaXbhRn15wMY7e/yzon0lS0kkhp7XcpqavooJaapWRvLM8y8SqfV9xI554HpjSC0zywItPH5Zw8bL3Ktjy8/X9jp5td6qae3TXCppoRbKT4aRYliCyTSu+GLHvkBTrHU2tY3Mmn06UrhYegqaW3X2orYv5ZrqPDiqAjEk0LBTJg8c7gcj20q36to3rWmnucHiOBvBm3En1xwONDP4hVHxFyhpKiqa4ik3rC8jfldsgHHsNv76EWdBS19PNPboaiCNwz07DAkHt760odkHAgXVox3GEhc6dvJTtJKRyfDVj7ew1KquqKaDxpKdhHxkNKm7n/AA7t37a8+CuM1RWGjVqOCs3K0Cfh2E52c+nbRG2dBVVSwysmCOdq/wC+Nbm6z5mPjqHtGDpG9QUluV8tFSVNQtOs0uCsskilhgd1Ckcng50T6dqEa4zKAtBLDEkTrDO0o3DOfMTkgZ76qW7oCmoBmWvqlB5anhcEZ/Tj7aZKK30NsgVaOhjVSOXYtvPyY5zpcIS25pq1g27VlqvudVSUNQDV+J/JbZui78cYOqk9YtNTSEfgjQ/oBrXd5VSy1iLAgXwyfxscfMZOqUIFdlZSwhLbSMfj9do+oBz8jrgfWdGdRfUgEZ0tu1GJl23zT09upIakgVCQjxdvYN/vGmywnNnpD/g/765yat0rK9ZGw3xDEZ9vTT70rVx1NkpVXh0jAK/99Vo6dmptIH2mzOCoh1e2pqL21NdSBAlz3S1xXww/l4znjQS61dLS11upKyLCVTuDKPwIFGSOfxHtpprI9wLJgN6fM+mdc16/gWAUUUzO88blgd3pjGcemdG1pVQFmS0hmyZkvVFrhnnUWeSeMP8AyWefaVXA44H1P31SkS29WVi29rc1I8wbZmoL7mAyBnAxwDoPE6kAKrD5bdbkfwpVf+dHtYZdTgr8wc6zDsOczYovQgi5dDVNFM0eHZVPlYA88+vHfOtA6XjpIGrLoZVp0OFjU+aU+3bga7m9DSIkMAVpFSFSrudzMBxkn1PA/TXNuvquhS8TmSpnWntaBHhiQNywVsgHuTuA54HfOmzZlIsEbfgniD7dXW2itD18kU8sCAs1PSKIoowvo0jcsT8ufkNUaG+uHarqZqg00zFlp1VMYzz52yeOB+H076CfxIqbbVGhitcjbEQuZZ5dzOGHYn0xgjA45/Qx1P1jYFslJZunbXRqkMSmSeWMBWYgbiF7nt3PJ0sd0ZBWX5OkWrEjudKsgjmG7ax3cH8yn/XtpgsvS5wFZcY9B6fMnXP+jOqYYOpbfTwwPBFWVKwzpDUsyYc7RhW/Dgn09Nd8tlrjhqV21NZJg5IlmLDA+X10xXd6Oe4rbVufjqVqXp5KOjeSCOMT7fJny5PzOCRqUAro544qql3RucF4pdwX9gf20yzAmFh8ta6eMK5b240uzsx7my1qBBtZbkhBkSNWX3YHI/Q6GfFU8b+E6xEk8qgLH+um1gCpBHB76ByQw07SHYR4ec4A7Dkftrauz2Mxsq9xE/q3qKktUHwjUcc1VMmRESQFQ/mb/TSpH1ZcZZV3yPGV4QwDbt+W3HOq8ldSdQXP4mSMxQytukq8jj0wV9cYGMfLRWotYhhD2+JhE/CyEAM/0OcD6ahYHDGEFAyqnMrNe6kSH49Vqlf8RIw4/T110bpcwCkojRsssJTAk5BPuCPQ51z6KwVZi8bYnhYyWd8Dvj0B9T/XTj0C0NLLNRJMsrEsx2MNoYYBwO47/toPSpJHvD2lsfaPafh1NeKeNTWc0miYFkO0ZPcD31ya63WG73Oqrvh3fDlBG/BULxjH1B11vkjjvpL6l6WqhcmvNiWmlmZG8WiqVykh486nIw3GOTjVnmQRZglQQhkoOd2NucN/TWbNGVYzwIgB8q59dDKy+9RwTtFU9OXGNwcYShkcfYrlT9s6LdP2S+X191fQzW+kP56hdrn6ISSPvjVYl5jh0tWG6UMcoV9tPEtMWbs7L3I+XbSt/Ee4U1iklRemoa961lllldeH2gAA45ONoGO3bXRrfRwW6kipaRNkUS7VGf6/PVW92ejvFOI6uFXKnKk+mrJ4xBA5yZzI9R25rG009PSUkqUplWCmi5UgE7MFcZ4x8s9tULhemslFb1tFDSlKxDUPKYw+9ieRzjkZ7ex0w37oWnq6qBXgqYoYzk+DK3h4HbufXt786VbLa7/W1UtsSy1XwsVQWhmqICI4GVsqfNgMvcEKScNx20IBHcIkE8TZJdbj1P1jYaWjikp7VAYaiWKJfzodz7iOW5XAB4512GiuFLJVgRuwYnaVZGU8/Uar9N2U26FZ61aZrgy4kkp4tigew9ccDvo0wDAg5OdGDxzBYc8Slfq6opIIko6OSpkqHMeUP93kHzEd9LkFBeIohJPc5aeWOYJ5cMqbgAGI43cHHmzjTckrRgCUMf8AEBn9daK0U89LOgKM7KW2hgCT6aGXL68IAzZIHJ9/noZKizJL5gBIGGc9hjA17b2qZKGKOpRoztAbcfMRxwfn6HW/4aDORCgPuBq1OIJGZwdrK9kqqeCFoKlYGaN6eoYp7jk/odHKWuSK3pQxpJK5ctIsOHPPsBngfP2009c9CC9zpcrZUGmrkUK658kw9M57Ee+glmp6yzzqlypLhFg/3q05kU49ioOdHtDj1HqB6UYlB3Clttlwjt1PTwF2pkiIJnXbtBbd5mPdufy50R6Vp3kvNTVSSmZkjCNIfUnkAfIc6LTxyXO3MlNUVUfiAYZ4imPqGGdXbZQQ22kSnhLNjlnbu59SdUSIfcvDtqax3a91UkwHbQu63qKhLRrhpF4YsfKp9uO7fIftq5WVPwdBUVRXd4MbPj3wO2lS2QUTtU19e5nFCX8V8kBJAeePViQT8vKNaIo7MzsZsYXubZeo6uKUxyb42HdTAAB9ic/uNErX1DFUkJMUXJA8RcjBPYFT2z75I0r3GWKtma4tWrNTPgDDKJI89gw+R9RnQ+kpqzxjPDC7QIdryLExEi+oAAyc6cNVZT4MQSy5X55E6rqrX18VDGGfO9h5UHGffn0A9zrTYp5J7aglJ8SF3hcnuShIz9xg/fQG9UhucdTVySzqoqTTxrDF4mVTjkZHG4MT9tIqg3YM6DuQuRPKjqmRnzGwC+nhRgj/ADN3/TVmg6keRsSr4q5wcJtYZ+5BPy4PtnS7WW5qOKJ5SY4mUASshVWOT6HnOPTGjVijtc9guAeSWpjjHiTeQpjAJG3nuMe+nLFpCZUTn1NebMMY1QzR1EKSwuHRxlSPbUnmjp4mmlYLGgyxOlroq4GpSWPcWRlMiM3BJDFWOPTI2n6k6865uD06JFGcbV8Qlf8AiLbU/wDmfqBpTxE2bJ0PJhN83VXUMr1Hw9JGwcnATZuf75IC/v8AbXtXeKy3zKtUVaN8bS6AKf8AqU8fodI9oniDmRwsix8be+WOcdgc9j6au3CWKanYwxbWj8+dpXyjg/lGfy/oTp00ICFnP81p5nQ7fXw10ZaLgrjch7r7fUH3Greub9GXN47ikYbKhwhHujnH7OU/U6d7/O1PbHEZO+ZkiUjuNxwT9QMn7aUtq2Ptj9Vu5MmU7l1FFTMUg2EjIEhBOSO+B6+2eBoZH1NVFiVEjYGWIgBAHzAOR+ulh/5lWzSGoJBwBHTkqoHYA57AaYLai2oCarmaOmnjxIpUFiCcZA7gAHJJ00a6kT5MRay57ODgRhtV5hryEbashBCkHKsfYeoOOcHRbSBd6OGz3WFKKVoviGCojtnk/wB26+4DcEH+h080NQKujgqQMeNGr49sgHSdiAepejHqWJGG7E251NeE86mgxDzKlypmrrPV0sbbXmhZFb2JHH76RaOpjpGpIvGxDKtbcq+Jz75Xwm98FiPtrocbrswTjSr1X0jTXcvNTlBI53NGW2ZbsWVh2JHfIIOORnnWtbDOD1AcHGRFOy1SWKlpnpoKZ6mSFZJJWG45YK2xeMcZ7D1GnKq6qrESAUNr8dmQNNM86JHH/wAXruOBk9tIsfRt6pGaGkNwijLZ2osJH2bxAPvxpk6Y6Ego5BPXBBu/GhcO8nrtY9gucZVe+OSRxpi0V43ZzMa9wOBGnptZDaxPUZWSrmkqCvsHclR/l2600NyprRJcqa4zLAsVSZY2f80cp3Aj/q3r9tLH8Y77W2iw0kNsqHp3q5ykksR2uFAzgH0z/TXLumEqb3dPCrK9KjCYFPWV80TTD2VkDE4IBI0qFzknqMTsl96soK6lNNQhKmBmKVnjK0eyIqcsoYDcc+g+Wl7o+vai6LuKVm4T1JqApJzt2U4PPt66Vr30LNHBHWUt3oKWmd/BeGrq5CEl4wqsUy2c+oz9dV6zoq+W2kSSvv8AbKSm3GJBLVzINzDkAFB31uGQJtEzKMTunRv4YUNTFTNNU7yUiCHPfe7b2H2Xwx9c68/ilQVM9Mr06EiSLbwOd6NuA+6mT7jSFF0Z1QKeaWLqKljgiRpZW+OnRVXuW/Bq3YrLNLaLpW197t12EAieJmvFSsEKgtvZioHOcY79jofJizyQtno2x76NMto6epUpKWhkimhEyS/E7HmcgHkFfckd/wAo0Wa5XSamkSW1UKTPlVhkrs7xj5J78a5Fe+kZDJbqig6jt6UdXFupEqK+RyCPxrGdvmUH14+mqs3Rt7hpprnL1BbRDSkbp5K2YFCThcEp6nGhbBOZe0gYjf0zap06uqYFbfAlZtUjsscbb2+uHEafrroPUfiJbPiYV3vSzRVBUdyquC+Pnt3a+eemeorpab/SVMFbOd86pKjOSsqs3IYHv3J+vPfX0wXQjuMEeupc5ZgTKrUKuICrupp6YU5gsVbVLKu/dC8ZCZ7fm9c61X2pFbt+JtdRHT00iTPUvIgTYuGcHBJIIyMe+NV7tZbjTwPHYa+SGnYkrCpQNHnuELgjbnsOMZ4OMAK8di6oamqqGae5T09UAsqzLE2QD6OZDj7aJEUjOcQWYjjE33b4uuZZZ5DJV2e7SpIFIBkQ4eJQPm2xB99dDtVKaK2UlIx3NBCqMfcgAHS70t0nDaWWepKvMGDhd5bDYxuZj+Ju4HYD0GSSWoMNBa2fSOhDrXHMwb8Wprxz5tTQiQzTkamRrXnUzo5nmbMjU+Q5z7aw1VuUDVNFLHG8kb7SVKNgkj0+h1Rljk8xY/il05W9Q2WnFtQSVNLMZBCWClwRggE8Z+uuZ2npvraz1q1lvslYkyoyZIUgqwwynzdj8u3cEac0uVdFZXiSpqDLbKvxHYuxMqE+IoY5z/dluPXA0fiuj0MNPLA6yNcGMkbTys/kCnaFXPcgbs8cE6yF49xHm0jDABiXcz1rdLRFQVvSRXwaxKpDBhVYDurAuSc/8Wc86v8AUA6juUdRUU3T9YaiSWKSniqIYz8GykHKFWwxyBy3PJ0cfq6pa3U08tJHHDPCfHmG5wjds7QQwXvzz2PPGTTtl1qLPPcPh1ieKW6xxSeJndhljXgg8d88g51RuTMsaSwjnuAo362FRdXl6euc0dzpHhmikqgyxO35owW4Gfy+3rodb7d1xT2V7FVWS4z2iQ+aGORUdDnurZP+VgQfl305W2/1NvNRDS0tPve5pAzSFyX3CIZPPfzjn/D251dpOra6YBDTU+/43wGlGVXaYw+dpY8+YDGT76sXpiUdJbniI89L1stLY4bf0/XUs1mMop51aMlkcgjIzjOBz6HOvJoOvKyz3i3XOx3CpFymScyySLmF1kD4VS2Apx24x9NP97vV4pejTWPCkFxlR8LGCfDO1iO5OT5dSukFhoEvdLLLUwJSFkjadiJDszuPyxzn0++i8g7mYpYj9cTmHTv8P+oqm70gq7dJRU8cqPJNMyYABzgAEknjGu+aUKrqW6Use40lMQ0sKxuyuodXZVPGeOW4PII/XVGt6luc+I0eKnkiuEcO6JTiRWAbBBY474PPPy1TXrCXR2t8R91599KsPU1fU1Uop6KIwQ1Igk3BgQMDLZ7Dk8L6++Tqz0veLnd0WepgpUpf5ql41YEusjIMZJ4wvI/fUFqnqA+lsRSzY4jFk++pk++sdw1Nw1rFszLcdTWO4ampKzNWoBk4GvOfY6rXKjWvoJ6OXhZ0KElA23Prg8HRGSbauojpKd55ywROTtUk8nA4GpBUpPE0kZcBT5lYEMp9ip5zpSm6HpzJIY6aiKFHVcxY5KxBT275SQ/9Z9zrw9G08tRcAKSjiBkSSB/hwVxz5cbRgduxJ45ONDkwsCMFNS2ypgnggXyyMJJARhgQfLnPIwR2P9Na56W1VtYKeSL+dSqFUFPKMAEAZGCQGHbtkfTVW0dOQ0VJX0zQU+2rRFfw4wRxGqtkEYPmBP31QsXR4tlVS1Ewo5nhqZJd/wAOqvg79uCB6Zj49CDj0Gh2/aXvPzD0dgt6YCwEL224AB5zg4Hvrz+wKB1cNDne4ZwcHcw7E8cn56AXyzpW31Y2SNviN+15YFkMLGLCkBsgjd5sYIz7euI6KhUTHwaNnclk/kICmYtoUeTHD85wffvqYHxC8jf9Q7T2a3VUJmFNIBI4kIkUAsw7MR7/AD76q3LplaiUCn8LwWcPNDMMCR8EZY7Tu7+3prXTWBZ+lUtctNDSyKSx/lpIFfJ55GDn3xqdMdNiySwzOtMZVpFhaSOMBi+ckk4Gc9s9zgZ1RQHjEsXWLyGMJWyy0tFazQbN0RkaQqOArMc+XHbGtU9ttNtom8SmxFIyoNiEsSTwAFGe+hFX0eaitMrrRyR7W2xtCAATJG2cY9Qsg/6vmdUx07T1F5qKV6anlVFjZHmhBICTAspJz3QhRnuAe+NTb7YgmxiSSe4y09mtM9Mqww5hB4UAABh7jGMj7Y1sexW51dXgD+I++QnB3sPU8c6Wp+gYWp6iOKWDe+wpKaaJTnncMBcL3HI5457aJXPpoVFioqOnhoTPSs2wSQgReZWUkqBz+LdjjLAHV7R8SeRs/iluKls8lzmEaSLUq4jaTaQAwUHar474PbPbROgoae3weDSxiOMsWKgAcnv20pVHQ0EkVUscNDH4hDRbIU4IijXklSQNyseMHzZ7517W9DQs84ooqERyJIIzJCMxlt3PAOTkrg5G3HHfUAx0JRYkYLR1zjUzpbtXS8FtvKV8IgC7JB4awomwnbjBVQT2bknPOmLRgfMzMyyNTWOpq8STkHTsMVxSYV1zrYpUYBFjmbkFSfY4/CeT8vcaK1H9l1tOX+MqKdoo4n2xzorKrLHwwHLDz5ycng8840eoOi7dQSmWmrK9WIwdzRkfumqw/h5Z+B8TcD/6if8AhpAUWgYnoX+oaZnLbiB+UDrS2+geOSpuNW3IBEtSvhnKuefb8HqRgkdsa1Wu5z27rT4OhlneiaoFO0TymQOAAN2STzkbsj+nGi03Q9jplOJ7nJtGdkbIT8vyd++r3TlhsluqUqacVJqSuImrWGR/y4AB49dRabNwgvrtN42OS2RjqGLlV3OG4U0dDQpNTOf5spkAKfIj0GOc/L56oVdyvsVxqI6e2mam3ARswwABu5Bz64Hf3Hvq7cKu5QV1LFRUCzU7n+bLvwV+3pxzn/XQ+53W8rJWQ0ttdVUOsM4BJYhcg4wQMnIGdOe55nEI9K8D+/Mxiu17r6CaSGkWIZQRvFglz4iB8ZyBwW7+x9tV/wC0upJKaKE2+ZZN3ndEw7AD5jYM5H9PfFlLpc6O3zyS2rY0e0KFQjxCc5OFz7D5863pdLs0dSwtbFoh5F2sCxyM9/THtqSpjQ19+Snl+LoWZkQlX258RgccBfT17c/PGpDdr5ib4q0iPw4d64DMHbngY9sfXntqrba++vUSiaJ5GihP8poCiu3nK88DJwB3/rrVHc+oUqjLLTTOpYlIRDgKm7GGOPxcg5yBx9zMmSX6e73llkee3bEWmEqttPmbjy9/n9dZUN3u8zKZreyQmLfu8JwSSpIAH14x31j/AGxdRT00gtjb5t3k2v5MbSM57ZBbvj8ONaf7XvEUkI+BkmZ6YTPE0LHY7EeXcox5c7cdz39DmSpnBd7+/hs9kdI2CkkDcRnHGMg559RrGqruoJJqJYKJ40KLLJJHHkZ2kmMhhnGcDsDz7a8W73qSsEU1A9PC80aZ8JmwCxyQRkDIx37a01tw6jNafDppIYACAiQb8vkYbdz5eSMfL051MywJbqbrfVqZVp7OZIlkKKSCCcZwecd8cEZHI7c4uWOqrqyWravg8ERMsYj2kc8knnk8FflqWa419dJKK2halVVG0kMMnjPf/eMeuQCm7RAHvMBm9sTPUzrDdr3OigZmWdTWO4ampLzNWpqamjmc5f1bcaia6XKldv5K5AQE44wBxnV3+G7NXWesgqGJjhmkEYyfIQBgj2PJ17qaTT8cefiqOcdZL8Pa2O0mqIEmR/gJ40Put4qoI3WHYhNQkW4A5ALqp9e+CdTU1qSeZmVGBxKtLfq6VrcCYxvZ95C/iwpP27emNZ26+VlRU3HxRGViKbF28Dkg+vy1NTUyZW0TX07fK6rqDFUusi4iwSoBG4ZPb6/to/JWyC4RQbUKuRkkcjn/AO9e6moDxKYDdFik6kuMlrSVnj8VqhEL7OcMVz8vXRs3eo3AFIj5iOx/11NTUzCKiapbzVRXmspQsZiiEe3IORnOfXW0XSc3pKTbH4TU7yHjncNv/kdTU1MwSBPDeKjLfy4vL8j6DPvojbJnqKGllkOXdFLH3yNTU1awCIC//oasXkUXhQeGa1qfO1s7Qm7PfvpmbhmX2I1NTRCW6gDM81NTU1cET//Z"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-    (function(){
-      emailjs.init({
-        publicKey: "CE1fY3ivW-v5RwDbZ",
-      });
-    })();
+      (function () {
+        emailjs.init({
+          publicKey: "b2qb1JcPYnOWL2EfX",
+        });
+      })();
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    <div class="container">
+      <div class="container">
         <div class="logo">Logo</div>
         <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
         <ul class="navbar">
-            <li id="nav-list">Home</li>
-            <li id="nav-list">Services</li>
-            <li id="nav-list">About Us</li>
-            <li id="nav-list">Contact Us</li>
+          <li id="nav-list">Home</li>
+          <li id="nav-list">Services</li>
+          <li id="nav-list">About Us</li>
+          <li id="nav-list">Contact Us</li>
         </ul>
         <div class="username">Username</div>
-    </div>
+      </div>
     </header>
     <main>
-    <section class="hero-section">
-    <div class="main">
-    <div class="text"><h1>Revatilize your</h1>
-    <h1>Clothes with Expert</h1>
-    <h1 id="text-color">Laundry Services!</h1>
-    <span class="descr">From Premium Dry cleaning to swift wash and fold, we 
-        deliver care and convenience.Schedule a pickup and
-        rediscover the freshness of your clothes today!
-    </span>
-    <button id="Btn"><i class="fa-solid fa-store"></i>  Book a Service Today!</button>
-    </div>
-    <div class="img">
-        <img id="image" src="washing.jpg" alt="">
-    </div>
-    </div>
-    </section>
-    <section class="section-overview">
+      <section class="hero-section">
+        <div class="main">
+          <div class="text">
+            <h1>Revatilize your</h1>
+            <h1>Clothes with Expert</h1>
+            <h1 id="text-color">Laundry Services!</h1>
+            <span class="descr"
+              >From Premium Dry cleaning to swift wash and fold, we deliver care
+              and convenience.Schedule a pickup and rediscover the freshness of
+              your clothes today!
+            </span>
+            <button id="Btn">
+              <i class="fa-solid fa-store"></i> Book a Service Today!
+            </button>
+          </div>
+          <div class="img">
+            <img id="image" src="washing.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="section-overview">
         <div class="overview">
-            <div class="achievements"><h1>Our Achievements</h1></div>
-            <div class="details">
-                <ul class="ach-text">
-                    <li><blockquote>15+
-                        <br><cite>Laundry Services</cite>
-                    </blockquote></li>
-                    <li><blockquote>240+ <br><cite>Happy customers</cite></blockquote></li>
-                    <li><blockquote>2+ <br><cite>Years of Experience</cite></blockquote></li>
-                </ul>
-            </div>
+          <div class="achievements"><h1>Our Achievements</h1></div>
+          <div class="details">
+            <ul class="ach-text">
+              <li>
+                <blockquote>15+ <br /><cite>Laundry Services</cite></blockquote>
+              </li>
+              <li>
+                <blockquote>240+ <br /><cite>Happy customers</cite></blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  2+ <br /><cite>Years of Experience</cite>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
-    <section class="services">
+      </section>
+      <section class="services">
         <div class="tabs">
-        <div class="left-div">
+          <div class="left-div">
             <div class="header">
-                <h1>Our Services</h1>
-                <p style="color: #aea9a9;">Click on the Add To Cart Button To Add The Services To Your Cart.</p>
-            </div><br>
-            <hr>
-    <div class="service">
-      <span class="name">Dry Cleaning</span>
-      <span class="price">₹200</span>
-      <button onclick="toggleItem('Dry Cleaning', 200, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
-    </div>
-
-    <div class="service">
-      <span class="name">Ironing</span>
-      <span class="price">₹30</span>
-      <button onclick="toggleItem('Ironing', 30, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
-    </div>
-
-    <div class="service">
-      <span class="name">Stain Removal</span>
-      <span class="price">₹500</span>
-      <button onclick="toggleItem('Stain Removal', 500, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
-    </div>
-
-    <div class="service">
-      <span class="name">Wash&Fold</span>
-      <span class="price">₹100</span>
-      <button onclick="toggleItem('Wash&Fold', 100, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
-    </div>
-
-    <div class="service">
-      <span class="name">Leather & Suede Cleaning</span>
-      <span class="price">₹999</span>
-      <button onclick="toggleItem('Leather & Suede Cleaning', 999, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
-    </div>
-
-    <div class="service">
-      <span class="name">Wedding Dress Cleaning</span>
-      <span class="price">₹2800</span>
-      <button onclick="toggleItem('Wedding Dress Cleaning', 2800, this)" id="add">Add Item <i class="fa-solid fa-circle-plus"></i></button>
-    </div>
-    <br>
-            <hr>
-            <div class="service-info">
-                <p><i class="fa-solid fa-circle-info"></i>Add the items to the cart and book now.</p>
+              <h1>Our Services</h1>
+              <p style="color: #aea9a9">
+                Click on the Add To Cart Button To Add The Services To Your
+                Cart.
+              </p>
             </div>
-        </div>
-        <div class="right-div">
+            <br />
+            <hr />
+            <div class="service">
+              <span class="name">Dry Cleaning</span>
+              <span class="price">₹200</span>
+              <button onclick="toggleItem('Dry Cleaning', 200, this)" id="add">
+                Add Item <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+
+            <div class="service">
+              <span class="name">Ironing</span>
+              <span class="price">₹30</span>
+              <button onclick="toggleItem('Ironing', 30, this)" id="add">
+                Add Item <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+
+            <div class="service">
+              <span class="name">Stain Removal</span>
+              <span class="price">₹500</span>
+              <button onclick="toggleItem('Stain Removal', 500, this)" id="add">
+                Add Item <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+
+            <div class="service">
+              <span class="name">Wash&Fold</span>
+              <span class="price">₹100</span>
+              <button onclick="toggleItem('Wash&Fold', 100, this)" id="add">
+                Add Item <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+
+            <div class="service">
+              <span class="name">Leather & Suede Cleaning</span>
+              <span class="price">₹999</span>
+              <button
+                onclick="toggleItem('Leather & Suede Cleaning', 999, this)"
+                id="add"
+              >
+                Add Item <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+
+            <div class="service">
+              <span class="name">Wedding Dress Cleaning</span>
+              <span class="price">₹2800</span>
+              <button
+                onclick="toggleItem('Wedding Dress Cleaning', 2800, this)"
+                id="add"
+              >
+                Add Item <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+            <br />
+            <hr />
+            <div class="service-info">
+              <p>
+                <i class="fa-solid fa-circle-info"></i>Add the items to the cart
+                and book now.
+              </p>
+            </div>
+          </div>
+          <div class="right-div">
             <div class="right-div-1">
-                <h1>Added Items</h1>
-                <div class="head">
-                    <p>S.No</p>
-                    <p>Service Name</p>
-                    <p>Price</p>
-                </div>
-                <div class="center-text">
-                    <i class="fa-solid fa-circle-info empty-tag"></i>
-                    <h3>No items added</h3>
-                    <p>Add items to the Cart from Services Bar.</p>
-                </div>
-                <hr>
-                <ul id="cartItems"></ul>
-                <div class="total-top">
+              <h1>Added Items</h1>
+              <div class="head">
+                <p>S.No</p>
+                <p>Service Name</p>
+                <p>Price</p>
+              </div>
+              <div class="center-text">
+                <i class="fa-solid fa-circle-info empty-tag"></i>
+                <h3>No items added</h3>
+                <p>Add items to the Cart from Services Bar.</p>
+              </div>
+              <hr />
+              <ul id="cartItems"></ul>
+              <div class="total-top">
                 <h4 id="total-text">Total:</h4>
                 <span id="total">₹0</span>
-                </div>
+              </div>
             </div>
             <div class="right-div-2">
-                <h1>Book Now</h1>
+              <h1>Book Now</h1>
+              <form id="booking-form">
                 <div class="first">
-                <form action="#" id="first"><label for="Name">Name</label>
-                    <input type="text" id="form-name" minlength="5" maxlength="50" required placeholder="John Doe">
-                </form>
+                  <label for="form-name">Name</label>
+                  <input
+                    type="text"
+                    id="form-name"
+                    name="name"
+                    minlength="5"
+                    maxlength="50"
+                    required
+                    placeholder="John Doe"
+                  />
                 </div>
                 <div class="contact">
-                    <form action="#"><label for="email">Email</label><input type="email" name="" id="form-email" placeholder="@gmail.com" required></form>
-                    <form action="#"><label for="Phone Number">Phone Number</label><input type="tel" name="" id="form-number" placeholder="0000000000" required></form>
+                  <label for="form-email">Email</label>
+                  <input
+                    type="email"
+                    id="form-email"
+                    name="email"
+                    placeholder="@gmail.com"
+                    required
+                  />
                 </div>
-                <button id="book" onclick="sendMail()">Book now</button>
+                <div class="contact">
+                  <label for="form-number">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="form-number"
+                    name="number"
+                    placeholder="0000000000"
+                    required
+                    pattern="[0-9]{10,}"
+                  />
+                </div>
+                <button id="book" type="submit">Book now</button>
+              </form>
             </div>
+          </div>
         </div>
-        </div>
-    </section>
-    <section class="quality">
+      </section>
+      <section class="quality">
         <div class="container-quality">
-            <div class="premium"><i class="fa-solid fa-jug-detergent" id="icons"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quae libero quam sint! Ipsam repudiandae sunt reprehenderit ab cumque possimus.</p></div>
-            <div class="customer-support"><i class="fa-solid fa-phone" id="icons"></i>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia consequatur consequuntur animi voluptates laboriosam atque ratione! Nostrum doloremque repellat libero.</p></div>
-            <div class="quality-delivery"><i class="fa-solid fa-truck-fast" id="icons"></i>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque provident, vitae voluptatibus debitis quia blanditiis veniam possimus sapiente quo nisi.</p></div>
-            <div class="quality-prices"><i class="fa-solid fa-hand-holding-dollar" id="icons"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel explicabo earum distinctio iure labore voluptatem totam incidunt id voluptates voluptate.</p></div>
+          <div class="premium">
+            <i class="fa-solid fa-jug-detergent" id="icons"></i>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quae
+              libero quam sint! Ipsam repudiandae sunt reprehenderit ab cumque
+              possimus.
+            </p>
+          </div>
+          <div class="customer-support">
+            <i class="fa-solid fa-phone" id="icons"></i>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+              consequatur consequuntur animi voluptates laboriosam atque
+              ratione! Nostrum doloremque repellat libero.
+            </p>
+          </div>
+          <div class="quality-delivery">
+            <i class="fa-solid fa-truck-fast" id="icons"></i>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+              provident, vitae voluptatibus debitis quia blanditiis veniam
+              possimus sapiente quo nisi.
+            </p>
+          </div>
+          <div class="quality-prices">
+            <i class="fa-solid fa-hand-holding-dollar" id="icons"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
+              explicabo earum distinctio iure labore voluptatem totam incidunt
+              id voluptates voluptate.
+            </p>
+          </div>
         </div>
-    </section>
-    <section class="newsletter">
+      </section>
+      <section class="newsletter">
         <h1 class="news-head">Subscribe to our</h1>
         <h1 class="news-tail">Newsletter.</h1>
         <div class="news-info">
-            <form action="#" id="news-name">
-                <input type="text" minlength="5" maxlength="50" required placeholder="John Doe">
-            </form>
-            <form action="#" id="news-email">
-                <input type="email" minlength="5" maxlength="50" required placeholder="@gmail.com">
-            </form>
+          <form action="#" id="news-name">
+            <input
+              type="text"
+              minlength="5"
+              maxlength="50"
+              required
+              placeholder="John Doe"
+            />
+          </form>
+          <form action="#" id="news-email">
+            <input
+              type="email"
+              minlength="5"
+              maxlength="50"
+              required
+              placeholder="@gmail.com"
+            />
+          </form>
         </div>
         <button id="subscribe">Subscribe !</button>
-    </section>
+      </section>
     </main>
     <footer>
-        <div class="about-us"><h1>Logo</h1> <p>About us</p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam.</span></div>
-        <div class="imp-links"><h2>Important Links</h2><ul>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of use</a></li>
-        <li><a href="#">Refund Policy</a></li></ul></div>
-        <div class="contacts"><h2>Contact</h2>
-        <ul><li>mail@site.com</li>
-        <li>+91 91234 56780</li></ul></div>
-        <div class="social"><h2>Follow Us</h2>
+      <div class="about-us">
+        <h1>Logo</h1>
+        <p>About us</p>
+        <span
+          >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Quibusdam.</span
+        >
+      </div>
+      <div class="imp-links">
+        <h2>Important Links</h2>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of use</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <h2>Contact</h2>
+        <ul>
+          <li>mail@site.com</li>
+          <li>+91 91234 56780</li>
+        </ul>
+      </div>
+      <div class="social">
+        <h2>Follow Us</h2>
         <div class="profiles">
-            <ul>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-            </ul>
-        </div></div>
+          <ul>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <script src="script.js"></script>
-<script>function toggleNav(){document.querySelector(".navbar").classList.toggle("open");}</script>
-</body>
+    <script>
+      function toggleNav() {
+        document.querySelector(".navbar").classList.toggle("open");
+      }
+    </script>
+  </body>
 </html>
