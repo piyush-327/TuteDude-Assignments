@@ -1,4 +1,7 @@
 let cart = [];
+emailjs.init({
+  publicKey: "eT2Sl61ZHr7Ph-zHy",
+});
 
 function validateBookingForm() {
   const bookingForm = document.getElementById("booking-form");
@@ -114,26 +117,20 @@ function updateTotal() {
 }
 
 function sendMail() {
-  if (!validateBookingForm()) {
-    const bookingForm = document.getElementById("booking-form");
-    if (bookingForm) bookingForm.reportValidity();
-    return;
-  }
-
-  const serviceId = "service_ynyok23";
-  const templateId = "template_hdv4pxz";
-  const nameInput = document.getElementById("form-name").value.trim();
-  const emailInput = document.getElementById("form-email").value.trim();
-  const numberInput = document.getElementById("form-number").value.trim();
-
   const parms = {
-    name: nameInput,
-    email: emailInput,
-    number: numberInput,
+    name: document.getElementById("form-name").value,
+    email: document.getElementById("form-email").value,
+    number: document.getElementById("form-number").value,
   };
 
   emailjs
-    .send(serviceId, templateId, parms)
-    .then((response) => console.log("SUCCESS:" + response.status))
-    .catch((error) => console.log("ERROR:", error));
+    .send("service_ynyok23", "template_hdv4pxz", parms)
+    .then((response) => {
+      console.log("SUCCESS", response);
+      alert("Email Sent!");
+    })
+    .catch((error) => {
+      console.error("FULL ERROR:", error);
+      alert(JSON.stringify(error, null, 2));
+    });
 }
